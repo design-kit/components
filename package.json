@@ -1,0 +1,24 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "husky": "^3.0.9",
+    "lerna": "^3.18.3",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "/src/*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
