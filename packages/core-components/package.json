@@ -1,19 +1,38 @@
 {
   "name": "core-components",
   "version": "0.0.0",
-  "description": "> TODO: description",
+  "description": "Base components of @design-kit",
   "author": "kristof0425 <dombi.kristof@gmail.com>",
-  "homepage": "",
-  "license": "MIT",
-  "main": "lib/core-components.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
+  "homepage": "https://github.com/design-kit/components#README",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/awesome-components/awesome-components.js",
   "files": [
-    "lib"
+    "dist/",
+    "loader/"
   ],
+  "directories": {
+    "lib": "dist"
+  },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
-  }
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
+  "devDependencies": {
+    "@stencil/core": "^1.7.4",
+    "@types/jest": "24.0.19",
+    "@types/puppeteer": "1.20.2",
+    "jest": "24.8.0",
+    "jest-cli": "24.8.0",
+    "puppeteer": "1.20.0"
+  },
+  "license": "MIT"
 }

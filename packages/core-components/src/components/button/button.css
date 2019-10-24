@@ -1,0 +1,8 @@
+:host {
+  display: block;
+  --button-padding: 12px;
+}
+
+:host > button {
+  padding: var(--button-padding);
+}
