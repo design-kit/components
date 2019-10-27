@@ -1,0 +1,45 @@
+{
+  "name": "@design-kit/vue",
+  "version": "0.0.0",
+  "description": "Vue bindings for @design-kit/core components",
+  "author": "kristof0425 <dombi.kristof@gmail.com>",
+  "homepage": "https://github.com/design-kit/components#readme",
+  "license": "MIT",
+  "main": "lib/vue.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "Vue"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/design-kit/components.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "storybook": "start-storybook"
+  },
+  "bugs": {
+    "url": "https://github.com/design-kit/components/issues"
+  },
+  "dependencies": {
+    "@design-kit/core": "^0.0.0",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@storybook/vue": "^5.2.5",
+    "babel-loader": "^8.0.6",
+    "babel-preset-vue": "^2.0.2",
+    "vue-loader": "^15.7.1",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
