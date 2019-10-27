@@ -1,8 +1,67 @@
-:host {
-  display: block;
-  --button-padding: 12px;
+@import './button.vars.css';
+
+dk-button {
+  display: inline-block;
+
+  width: auto;
+
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  user-select: none;
+  vertical-align: top;
+  vertical-align: -webkit-baseline-middle;
+  pointer-events: auto;
+
+  font-kerning: none;
 }
 
-:host > button {
-  padding: var(--button-padding);
+dk-button[aria-disabled=true],
+dk-button[aria-disabled=true] button {
+  pointer-events: none;
+}
+
+dk-button button {
+  background-color: var(--dk-button-bg-color);
+
+  color: var(--dk-button-color);
+
+  display: grid;
+  grid-gap: var(--dk-button-slot-gap);
+
+  padding: var(--dk-button-padding);
+
+  border: none;
+  border-radius: var(--dk-button-radius);
+
+  font-size: var(--dk-button-font-size);
+
+  cursor: pointer;
+  transition: all 0.25s;
+  outline: none;
+}
+
+dk-button button:hover {
+  background-color: var(--dk-button-bg-color--hover);
+}
+
+dk-button button:active {
+  background-color: var(--dk-button-bg-color--active);
+}
+
+dk-button button:focus {
+  box-shadow: 0 0 0 2px var(--dk-button-outline-color);
+}
+
+dk-button button:disabled,
+dk-button button[aria-disabled='true']:not(:disabled) {
+  background-color: var(--dk-button-bg-color--disabled);
+  color: var(--dk-button-color--disabled);
+}
+
+dk-button button[aria-disabled='true']:not(:disabled):focus {
+  box-shadow: 0 0 0 2px var(--dk-button-outline-color--disabled);
 }

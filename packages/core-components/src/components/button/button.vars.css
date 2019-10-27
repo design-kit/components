@@ -1,0 +1,19 @@
+dk-button {
+  --dk-button-bg-color: var(--colors-blues-200);
+  --dk-button-bg-color--hover: var(--colors-blues-300);
+  --dk-button-bg-color--active: var(--colors-blues-400);
+  --dk-button-bg-color--disabled: var(--colors-greys-100);
+
+  --dk-button-color: var(--colors-white);
+  --dk-button-color--disabled: var(--colors-greys-400);
+
+  --dk-button-outline-color: var(--colors-blues-100);
+  --dk-button-outline-color--disabled: var(--colors-greys-300);
+
+  --dk-button-padding: var(--space-2) var(--space-3);
+  --dk-button-slot-gap: var(--space-1);
+
+  --dk-button-radius: var(--radii-2);
+
+  --dk-button-font-size: var(--fontSizes-1);
+}

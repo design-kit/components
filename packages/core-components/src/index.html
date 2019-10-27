@@ -10,11 +10,28 @@
 
     <script type="module" src="/build/design-kit.esm.js"></script>
     <script nomodule src="/build/design-kit.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/build/design-kit.css"
+      media="screen"
+    />
   </head>
   <body>
     <div style="padding: 48px 24px">
-      <dk-button onclick="console.log('hello world')">Hello button!</dk-button>
-      <dk-checkbox name="favouriteColor" id="favColor" label="green"></dk-checkbox>
+      <dk-button onclick="alert('Button')">
+        Button
+      </dk-button>
+      <dk-button disabled onclick="alert('Disabled Button')">
+        Disabled Button
+      </dk-button>
+      <dk-button
+        onclick="alert('Focusable Disabled Button')"
+        focusable
+        disabled
+      >
+        Focusable Disabled Button
+      </dk-button>
     </div>
   </body>
 </html>

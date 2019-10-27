@@ -16,23 +16,13 @@ export namespace Components {
     */
     'disabled': boolean;
     /**
+    * If `true` and disabled is `true`, only aria-disable prop will be true.
+    */
+    'focusable': boolean;
+    /**
     * The type of the button.
     */
     'type': 'submit' | 'reset' | 'button';
-  }
-  interface DkCheckbox {
-    /**
-    * The unique identifier of checkbox
-    */
-    'id': string;
-    /**
-    * The label of checkbox
-    */
-    'label': string;
-    /**
-    * The unique identifier of checkbox
-    */
-    'name': string;
   }
 }
 
@@ -44,15 +34,8 @@ declare global {
     prototype: HTMLDkButtonElement;
     new (): HTMLDkButtonElement;
   };
-
-  interface HTMLDkCheckboxElement extends Components.DkCheckbox, HTMLStencilElement {}
-  var HTMLDkCheckboxElement: {
-    prototype: HTMLDkCheckboxElement;
-    new (): HTMLDkCheckboxElement;
-  };
   interface HTMLElementTagNameMap {
     'dk-button': HTMLDkButtonElement;
-    'dk-checkbox': HTMLDkCheckboxElement;
   }
 }
 
@@ -62,30 +45,18 @@ declare namespace LocalJSX {
     * If `true`, the user cannot interact with the button.
     */
     'disabled'?: boolean;
-    'onOnClick'?: (event: CustomEvent<any>) => void;
+    /**
+    * If `true` and disabled is `true`, only aria-disable prop will be true.
+    */
+    'focusable'?: boolean;
     /**
     * The type of the button.
     */
     'type'?: 'submit' | 'reset' | 'button';
   }
-  interface DkCheckbox {
-    /**
-    * The unique identifier of checkbox
-    */
-    'id'?: string;
-    /**
-    * The label of checkbox
-    */
-    'label'?: string;
-    /**
-    * The unique identifier of checkbox
-    */
-    'name'?: string;
-  }
 
   interface IntrinsicElements {
     'dk-button': DkButton;
-    'dk-checkbox': DkCheckbox;
   }
 }
 
@@ -96,7 +67,6 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'dk-button': LocalJSX.DkButton & JSXBase.HTMLAttributes<HTMLDkButtonElement>;
-      'dk-checkbox': LocalJSX.DkCheckbox & JSXBase.HTMLAttributes<HTMLDkCheckboxElement>;
     }
   }
 }

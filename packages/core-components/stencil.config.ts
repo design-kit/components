@@ -1,5 +1,7 @@
 import { Config } from '@stencil/core'
 
+// TODO based process.env.NODE_ENV use different global styles
+
 export const config: Config = {
   namespace: 'design-kit',
   outputTargets: [
@@ -15,4 +17,5 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
+  globalStyle: 'src/global/variables.dev.css',
 }
